@@ -15,4 +15,4 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: echo "Is this branch master or develop? ${{ contains(['refs/head/master','refs/head/develop'],github.ref) }}"
+      - run: echo "Is this branch master or develop? ${{ contains('refs/head/master',github.ref) }}"

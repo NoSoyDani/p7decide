@@ -13,6 +13,7 @@ jobs:
     uses: AndresJR/p7decide/.github/workflows/django.yml@master
     secrets: 
       CODACY_PROJECT_TOKEN: ${{secrets.CODACY_PROJECT_TOKEN}}
+      HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
 
   release:
     needs: buildTest

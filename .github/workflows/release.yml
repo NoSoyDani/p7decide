@@ -4,11 +4,13 @@ on:
   push: 
     tags:
       - '*'
+    branches:
+      - master
 
 
 jobs:
   buildTest:
-    uses: AndresJR/p7decide/.github/workflows/django.yml@1
+    uses: AndresJR/p7decide/.github/workflows/django.yml@master
     with: 
       secrets: 
         CODACY_PROJECT_TOKEN: ${{secrets.CODACY_PROJECT_TOKEN}}

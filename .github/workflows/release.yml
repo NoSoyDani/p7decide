@@ -9,6 +9,9 @@ on:
 jobs:
   buildTest:
     uses: AndresJR/p7decide/.github/workflows/django.yml@1
+    with: 
+      secrets: 
+        CODACY_PROJECT_TOKEN: ${{secrets.CODACY_PROJECT_TOKEN}}
 
   release:
     needs: buildTest

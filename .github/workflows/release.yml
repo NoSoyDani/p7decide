@@ -3,15 +3,15 @@ name: release
 on:
   push: 
     tags:
-      - *
+      - '*'
 
 
 jobs:
-  build&tests:
+  buildTests:
       - uses: ./.github/workflows/django.yml
 
   release:
-    needs: build&test
+    needs: buildTest
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
